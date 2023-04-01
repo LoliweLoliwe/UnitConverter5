@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LengthActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="71dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="20dp"
+        android:text="Length in "
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="259dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="27dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_inch"
+            android:layout_width="64dp"
+            android:layout_height="39dp"
+            android:checked="false"
+            android:onClick="checkButton"
+            android:text="inch" />
+
+        <RadioButton
+            android:id="@+id/radio_foot"
+            android:layout_width="64dp"
+            android:layout_height="39dp"
+            android:checked="false"
+            android:onClick="checkButton"
+            android:text="foot" />
+
+
+        <RadioButton
+            android:id="@+id/radio_yard"
+            android:layout_width="64dp"
+            android:layout_height="39dp"
+            android:checked="false"
+            android:onClick="checkButton"
+            android:text="yard" />
+
+        <RadioButton
+            android:id="@+id/radio_mile"
+            android:layout_width="64dp"
+            android:layout_height="39dp"
+            android:checked="false"
+            android:onClick="checkButton"
+            android:text="mile" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="148dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="21dp"
+        android:text="Must be converted to"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="225dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/radio_mm"
+            android:layout_width="59dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="31dp"
+            android:checked="false"
+            android:onClick="checkButton2"
+            android:text="mm"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+        <RadioButton
+            android:id="@+id/radio_cm"
+            android:layout_width="55dp"
+            android:layout_height="34dp"
+            android:checked="false"
+            android:onClick="checkButton2"
+            android:text="cm"
+            tools:layout_editor_absoluteX="239dp"
+            tools:layout_editor_absoluteY="153dp" />
+
+        <RadioButton
+            android:id="@+id/radio_m"
+            android:layout_width="50dp"
+            android:layout_height="33dp"
+            android:checked="false"
+            android:onClick="checkButton2"
+            android:text="m"
+            tools:layout_editor_absoluteX="296dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+        <RadioButton
+            android:id="@+id/radio_km"
+            android:layout_width="53dp"
+            android:layout_height="35dp"
+            android:checked="false"
+            android:onClick="checkButton2"
+            android:text="km"
+            tools:layout_editor_absoluteX="349dp"
+            tools:layout_editor_absoluteY="153dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="486dp"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="183dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="480dp"
+        android:text="Click to convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="181dp"
+        android:layout_marginBottom="20dp"
+        android:background="#CDDC39"
+        android:text="LENGTH CONVERTER"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="110dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="19dp"
+        android:text="Type a value -->"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="102dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="387dp"
+        android:background="#292424"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
